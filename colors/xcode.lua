@@ -4,7 +4,7 @@ if vim.fn.exists("syntax_on") then
 end
 
 vim.o.background = "light"
-vim.g.colors_name = "xcode-default"
+vim.g.colors_name = "xcode"
 
 local colors = {
 	bg = "#ffffff",
