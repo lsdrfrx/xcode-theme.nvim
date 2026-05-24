@@ -1,10 +1,9 @@
 # xcode-theme.nvim
 
-A minimalist, modern light colorscheme for Neovim inspired by Xcode's pastel aesthetic. Designed to be clean, easy on the eyes, and perfectly integrated with popular Neovim plugins.
+A minimalist, modern colorscheme for Neovim inspired by Xcode's pastel aesthetic. Designed to be clean, easy on the eyes, and perfectly integrated with popular Neovim plugins.
 
 ---
-
-<img src="https://github.com/lsdrfrx/assets/screenshot_light_pastel_01.png" width="100%" alt="Lua syntax"/><img src="https://github.com/lsdrfrx/assets/screenshot_light_pastel_02.png" width="100%" alt="Elixir syntax"/> |
+<img src="https://github.com/lsdrfrx/xcode-theme.nvim/blob/master/assets/screenshot_light_pastel_02.png?raw=true" width="100%" alt="Elixir syntax"/>
 
 ## Features
 
