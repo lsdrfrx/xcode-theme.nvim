@@ -4,6 +4,8 @@ A minimalist, modern light colorscheme for Neovim inspired by Xcode's pastel aes
 
 ---
 
+<img src="https://github.com/lsdrfrx/assets/screenshot_light_pastel_01.png" width="100%" alt="Lua syntax"/><img src="https://github.com/lsdrfrx/assets/screenshot_light_pastel_02.png" width="100%" alt="Elixir syntax"/> |
+
 ## Features
 
 - **Xcode Pastel Aesthetic:** Soft, beautiful light palette that reduces eye strain.
