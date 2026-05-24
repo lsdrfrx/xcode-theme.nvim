@@ -187,6 +187,9 @@ local highlights = {
 	LualineDiagnosticInfo = { fg = "#2f81a7", bg = "#fafafa" },
 	LualineDiagnosticHint = { fg = colors.comment, bg = "#fafafa" },
 
+	SnacksIndent = { fg = "#e1e4e8" },
+	SnacksIndentScope = { fg = "#df9e5d", bold = true },
+
 	["@comment"] = { link = "Comment" },
 	["@string"] = { link = "String" },
 	["@number"] = { link = "Number" },
