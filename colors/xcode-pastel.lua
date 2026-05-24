@@ -80,7 +80,7 @@ local highlights = {
 	NeoTreeWinSeparator = { fg = colors.sidebar_border, bg = colors.sidebar_border },
 	NeoTreeCursorLine = { bg = colors.line_hl },
 
-	NeoTreeDirectoryName = { fg = colors.ui_fg },
+	NeoTreeDirectoryName = { fg = colors.ui_fg, bold = true },
 	NeoTreeDirectoryIcon = { fg = colors.library_class },
 	NeoTreeFileName = { fg = colors.fg },
 	NeoTreeFileNameOpened = { fg = colors.ui_fg, bold = true },
@@ -91,11 +91,11 @@ local highlights = {
 	NeoTreeIndentMarker = { fg = colors.sidebar_border },
 	NeoTreeSymbolicLinkTarget = { fg = colors.tag, italic = true },
 
-	NeoTreeGitModified = { fg = "#2f81a7" },
-	NeoTreeGitConflict = { fg = colors.preprocessor },
 	NeoTreeGitAdded = { fg = colors.comment },
+	NeoTreeGitConflict = { fg = colors.preprocessor, bold = true },
 	NeoTreeGitDeleted = { fg = colors.preprocessor },
 	NeoTreeGitIgnored = { fg = colors.line_numbers },
+	NeoTreeGitModified = { fg = colors.number },
 	NeoTreeGitUntracked = { fg = colors.comment, italic = true },
 	NeoTreeGitStaged = { fg = colors.comment },
 
