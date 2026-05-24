@@ -58,7 +58,6 @@ local highlights = {
 	TabLineFill = { bg = colors.status_bg },
 	NvimTreeNormal = { fg = colors.ui_fg, bg = colors.sidebar_bg },
 	NvimTreeWinSeparator = { fg = colors.sidebar_border, bg = colors.sidebar_border },
-	NeoTreeNormal = { fg = colors.ui_fg, bg = colors.sidebar_bg },
 	Pmenu = { fg = colors.ui_fg, bg = colors.sidebar_bg },
 	PmenuSel = { fg = colors.ui_fg, bg = colors.selection },
 	Comment = { fg = colors.comment, italic = true },
@@ -95,6 +94,70 @@ local highlights = {
 	Italic = { italic = true },
 	Error = { fg = "#ff0000", bg = "none", bold = true },
 	Todo = { fg = colors.comment, bold = true },
+	NormalFloat = { fg = colors.ui_fg, bg = colors.sidebar_bg },
+	FloatBorder = { fg = colors.sidebar_border, bg = colors.sidebar_bg },
+	FloatTitle = { fg = colors.keyword, bg = colors.sidebar_bg, bold = true },
+
+	InputNormal = { fg = colors.ui_fg, bg = colors.bg },
+	InputBorder = { fg = colors.sidebar_border },
+
+	NeoTreeNormal = { fg = colors.ui_fg, bg = colors.sidebar_bg },
+	NeoTreeNormalNC = { fg = colors.ui_fg, bg = colors.sidebar_bg },
+	NeoTreeWinSeparator = { fg = colors.sidebar_border, bg = colors.sidebar_border },
+	NeoTreeCursorLine = { bg = colors.line_hl },
+
+	NeoTreeDirectoryName = { fg = colors.ui_fg, bold = true },
+	NeoTreeDirectoryIcon = { fg = colors.library_class },
+	NeoTreeFileName = { fg = colors.fg },
+	NeoTreeFileNameOpened = { fg = colors.ui_fg, bold = true },
+	NeoTreeDimmed = { fg = colors.line_numbers_act },
+	NeoTreeRootName = { fg = colors.keyword, bold = true },
+
+	NeoTreeExpander = { fg = colors.line_numbers_act },
+	NeoTreeIndentMarker = { fg = colors.sidebar_border },
+	NeoTreeSymbolicLinkTarget = { fg = colors.tag, italic = true },
+
+	NeoTreeGitAdded = { fg = colors.comment },
+	NeoTreeGitConflict = { fg = colors.preprocessor, bold = true },
+	NeoTreeGitDeleted = { fg = colors.preprocessor },
+	NeoTreeGitIgnored = { fg = colors.line_numbers },
+	NeoTreeGitModified = { fg = colors.number },
+	NeoTreeGitUntracked = { fg = colors.comment, italic = true },
+	NeoTreeGitStaged = { fg = colors.comment },
+
+	NeoTreeTabActive = { fg = colors.ui_fg, bg = colors.tab_active_bg, bold = true },
+	NeoTreeTabInactive = { fg = colors.status_fg, bg = colors.tab_inactive_bg },
+	NeoTreeTabSeparatorActive = { fg = colors.sidebar_border, bg = colors.tab_active_bg },
+	NeoTreeTabSeparatorInactive = { fg = colors.sidebar_border, bg = colors.tab_inactive_bg },
+
+	GitSignsAdd = { fg = colors.comment },
+	GitSignsChange = { fg = colors.number },
+	GitSignsDelete = { fg = colors.preprocessor },
+
+	GitSignsAddLn = { bg = "#e8f4f1" },
+	GitSignsChangeLn = { bg = "#eef9fe" },
+	GitSignsDeleteLn = { bg = "#fdeeed" },
+
+	GitSignsAddPreview = { fg = colors.comment, bg = "#e8f4f1" },
+	GitSignsDeletePreview = { fg = colors.preprocessor, bg = "#fdeeed" },
+
+	DiffAdd = { fg = "none", bg = "#e8f4f1" },
+	DiffDelete = { fg = colors.line_numbers, bg = "#fdeeed" },
+	DiffChange = { fg = "none", bg = "#eef9fe" },
+	DiffText = { fg = "none", bg = "#d7f0fc", bold = true },
+
+	diffAdded = { fg = colors.comment },
+	diffRemoved = { fg = colors.preprocessor },
+	diffLine = { fg = colors.tag },
+	diffFile = { fg = colors.fg, bold = true },
+	diffNewFile = { fg = colors.comment, bold = true },
+	diffIndexLine = { fg = colors.line_numbers_act },
+
+	StatusLineModeNormal = { fg = colors.ui_fg, bg = colors.tab_active_bg, bold = true },
+	StatusLineModeInsert = { fg = "#ffffff", bg = colors.string, bold = true },
+	StatusLineModeVisual = { fg = colors.ui_fg, bg = colors.selection, bold = true },
+	StatusLineModeReplace = { fg = "#ffffff", bg = colors.preprocessor, bold = true },
+	StatusLineModeCommand = { fg = "#ffffff", bg = colors.tag, bold = true },
 
 	["@comment"] = { link = "Comment" },
 	["@string"] = { link = "String" },
@@ -115,4 +178,33 @@ local highlights = {
 
 for group, hl in pairs(highlights) do
 	vim.api.nvim_set_hl(0, group, hl)
+
+	package.loaded["lualine.themes.xcode-pastel"] = {
+		normal = {
+			a = { fg = colors.ui_fg, bg = colors.tab_active_bg, bold = true },
+			b = { fg = colors.status_fg, bg = colors.status_bg },
+			c = { fg = colors.status_fg, bg = colors.status_bg },
+		},
+		insert = {
+			a = { fg = "#ffffff", bg = colors.string, bold = true },
+			b = { fg = colors.status_fg, bg = colors.status_bg },
+		},
+		visual = {
+			a = { fg = colors.ui_fg, bg = colors.selection, bold = true },
+			b = { fg = colors.status_fg, bg = colors.status_bg },
+		},
+		replace = {
+			a = { fg = "#ffffff", bg = colors.preprocessor, bold = true },
+			b = { fg = colors.status_fg, bg = colors.status_bg },
+		},
+		command = {
+			a = { fg = "#ffffff", bg = colors.tag, bold = true },
+			b = { fg = colors.status_fg, bg = colors.status_bg },
+		},
+		inactive = {
+			a = { fg = colors.line_numbers_act, bg = colors.status_bg },
+			b = { fg = colors.line_numbers_act, bg = colors.status_bg },
+			c = { fg = colors.line_numbers_act, bg = colors.status_bg },
+		},
+	}
 end
