@@ -1,3 +1,5 @@
+local colors = require("xcode-pastel.colors")
+
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") then
 	vim.cmd("syntax reset")
@@ -5,34 +7,6 @@ end
 
 vim.o.background = "light"
 vim.g.colors_name = "xcode-pastel"
-
-local colors = {
-	bg = "#ffffff",
-	fg = "#656f81",
-	ui_fg = "#434343",
-	line_numbers = "#d4d4d4",
-	line_numbers_act = "#818c96",
-	line_hl = "#eeeeee",
-	selection = "#b5d5ff",
-	comment = "#89c0b4",
-	preprocessor = "#ef8776",
-	string = "#ee81b0",
-	number = "#8adcfb",
-	keyword = "#ee81b0",
-	storage = "#ee81b0",
-	builtin_const = "#ee81b0",
-	class = "#89c0b4",
-	tag = "#aa83e4",
-	library_func = "#aa83e4",
-	library_class = "#aa83e4",
-	sidebar_bg = "#f8f8f7",
-	sidebar_border = "#e5e5e5",
-	status_bg = "#f6f6f5",
-	status_fg = "#666666",
-	tab_active_bg = "#f7f7f6",
-	tab_inactive_bg = "#e9e9e8",
-	search_match = "#a8ac94",
-}
 
 local highlights = {
 	Normal = { fg = colors.fg, bg = colors.bg },
@@ -209,33 +183,4 @@ local highlights = {
 
 for group, hl in pairs(highlights) do
 	vim.api.nvim_set_hl(0, group, hl)
-
-	package.loaded["lualine.themes.xcode-pastel"] = {
-		normal = {
-			a = { fg = colors.ui_fg, bg = colors.tab_active_bg, bold = true },
-			b = { fg = colors.status_fg, bg = colors.status_bg },
-			c = { fg = colors.status_fg, bg = colors.status_bg },
-		},
-		insert = {
-			a = { fg = "#ffffff", bg = colors.string, bold = true },
-			b = { fg = colors.status_fg, bg = colors.status_bg },
-		},
-		visual = {
-			a = { fg = colors.ui_fg, bg = colors.selection, bold = true },
-			b = { fg = colors.status_fg, bg = colors.status_bg },
-		},
-		replace = {
-			a = { fg = "#ffffff", bg = colors.preprocessor, bold = true },
-			b = { fg = colors.status_fg, bg = colors.status_bg },
-		},
-		command = {
-			a = { fg = "#ffffff", bg = colors.tag, bold = true },
-			b = { fg = colors.status_fg, bg = colors.status_bg },
-		},
-		inactive = {
-			a = { fg = colors.line_numbers_act, bg = colors.status_bg },
-			b = { fg = colors.line_numbers_act, bg = colors.status_bg },
-			c = { fg = colors.line_numbers_act, bg = colors.status_bg },
-		},
-	}
 end
